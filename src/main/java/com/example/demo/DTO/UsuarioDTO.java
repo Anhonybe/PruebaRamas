@@ -21,7 +21,8 @@ public class UsuarioDTO {
     private String correo;
 
     @NotBlank(message = "El teléfono es obligatorio")
-
+    @Pattern(regexp = "\\d+", message = "El teléfono solo debe contener números")
+    @Pattern(regexp = "9\\d{8}", message = "El teléfono debe tener 9 dígitos numéricos y empezar con 9")
     private String telefono;
 
     @NotBlank(message = "La contraseña es obligatoria")
