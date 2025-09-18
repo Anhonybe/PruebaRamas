@@ -18,6 +18,8 @@ public class UsuarioDTO {
 
     @NotBlank(message = "El correo es obligatorio")
     @Email(message = "El formato del correo no es válido")
+    @Pattern(regexp = "\\d+", message = "El teléfono solo debe tener números")
+    @Pattern(regexp = "9\\d{8}", message = "El teléfono debe tener 9 dígitos numéricos y empezar con 9")
     private String correo;
 
     @NotBlank(message = "El teléfono es obligatorio")
